@@ -1,0 +1,33 @@
+/* .imgcat{
+    height: 10rem;
+    width: 10rem;
+    align-items: center;
+}
+.div{
+   height: 20rem;
+} */
+
+.movierow{
+     margin-left: 6%; 
+     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.movie{
+    width: 225px;
+    height: 225px;
+}
+
+.movie:hover{
+    transform: scale(1.02);
+}
+.imagecol{
+    width:150px;
+    height: 150px;
+}
+.each:hover{
+    transform: scale(1.05);
+}
+

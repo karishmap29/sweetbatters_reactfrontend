@@ -1,0 +1,34 @@
+
+
+.cart:hover{
+    
+    transform: rotate(-10deg);
+    color: rgb(113, 2, 2);
+    
+   
+}
+
+.movierow{
+    margin-left: 6%; 
+    margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   
+   
+}
+.movie{
+   width: 225px;
+   height: 225px;
+}
+
+.movie:hover{
+   transform: scale(1.02);
+}
+.imagecol{
+   width:150px;
+   height: 150px;
+}
+.each:hover{
+   transform: scale(1.05);
+}
+

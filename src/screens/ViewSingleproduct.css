@@ -1,0 +1,31 @@
+.backicon:hover{
+    color:rgb(42, 231, 42);
+    transform: scale(1.03);
+
+}
+.backicon{
+    color: green;
+}
+.Link{
+    text-decoration: none;
+}
+.main{
+    overflow-x: hidden;
+}
+.Link:hover{
+   transform: scale(1.1);
+}
+.btndel:hover{
+    color:red;
+    transform: scale(1.02)
+}
+.btndel{
+    color:rgb(202, 10, 10)
+}
+.btnedit{
+    color: #FFD95A;
+}
+.btnedit:hover{
+    color:yellow;
+    transform: scale(1.02);
+}

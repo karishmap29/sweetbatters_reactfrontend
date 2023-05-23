@@ -1,0 +1,39 @@
+.backg{
+    
+    background-image:url('https://i.postimg.cc/bv2YJ422/male-baker-with-bread-flat-color-illustration-baked-products-bakery-bread-production-bake-shop-food.jpg');
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size:cover;
+    height: 657px;
+    width:100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+  }
+  .font3{
+    font-size: 55px;
+  
+  }
+  .b{
+    background-color: rgba(128, 128, 128, 0.466);
+  }
+  .icondiv{
+    border:solid;
+    border-color: white;
+    margin-left: 35%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  } 
+  .tex1{
+    font-size: 12px;
+  }
+  
+  .icondiv1{
+    border:solid;
+    border-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 50px;
+  } 

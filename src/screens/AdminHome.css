@@ -1,0 +1,17 @@
+.Link{
+    text-decoration: none;
+}
+.main{
+    overflow-x: hidden;
+}
+.Link:hover{
+   transform: scale(1.1);
+}
+.btndel:hover{
+    color:red;
+    transform: scale(1.02)
+}
+.btnedit:hover{
+    color:green;
+    transform: scale(1.02);
+}

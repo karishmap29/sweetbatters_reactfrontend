@@ -1,0 +1,173 @@
+ <div className='container-fluid'>
+                <div className='row flex-nowrap'>
+                    <div className='bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between'>
+                        <div className='bg-dark p-2'>
+                            <a className='d-flex text-decoration-none mt-1 align-items-center text-white'>
+                                <span className='fs-r d-none d-sm-inline'>SideMenu</span>
+                            </a>
+                            <ul className='nav nav-pills flex-column mt-4'>
+                                <li className='nav-item  py-2 py-sm-0'>
+                                    <a href='' className='nav-link text-white'>
+                                        <i className='fs-5 fa fa-gauge'></i><span className='fs-4 ms-3 d-none d-sm-inline'>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li className='nav-item py-2 py-sm-0'>
+                                    <a href='' className='nav-link text-white'>
+                                        <i className='fs-5 fa fa-house'></i><span className='fs-4 ms-3 d-none d-sm-inline'>Home</span>
+                                    </a>
+                                </li>
+                                <li className='nav-item py-2 py-sm-0'>
+                                    <Link onClick={(e) => handlelogin(e)} className='nav-link text-white'>
+                                        <i className='fs-5 fa fa-table-list'></i><span className='fs-4 ms-3 d-none d-sm-inline'>Add new dessert</span>
+                                    </Link>
+
+                                </li>
+                                <li className='nav-item py-2 py-sm-0'>
+                                    <Link onClick={(e) => handleviewall(e)} className='nav-link text-white'>
+                                        <i className='fs-5 fa fa-table-list'></i><span className='fs-4 ms-3 d-none d-sm-inline'>View All Products</span>
+                                    </Link>
+                                </li>
+                                <li className='nav-item py-2 py-sm-0 mask'>
+                                    <a href='' className='nav-link text-white'>
+                                        <i className='fs-5 fa fa-clipboard'></i><span className='fs-4 ms-3 d-none d-sm-inline'>Orders</span>
+                                    </a>
+                                </li>
+                                <li className='nav-item py-2 py-sm-0'>
+                                    <a href='' className='nav-link text-white'>
+                                        <i className='fs-5 fa fa-users'></i><span className='fs-4 ms-3 d-none d-sm-inline'>Customers</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button className='btn border-none text-white text-end' type='button'>
+                            <i className='fa fa-user'></i><span className='ms-2'>Logout</span>
+                        </button>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+  {allDesserts?.map(item => (
+                                <Col md={3} className=' p-4'>
+                                    <Row style={{ height: '50px' }}>
+                                        <Col className='border text-center dashdiv' style={{ backgroundColor: 'rgba(18, 223, 18, 0.664)' }}>
+                                            <Row>
+                                                <Col className='text-center'>
+                                                    {/* <i class="fa-solid fa-building-columns fa-2x mt-4"></i> */}
+                                                    <img src={item.image}></img>
+                                                </Col>
+                                                <Col>
+                                                    {/* <p>Completed Projects</p>
+                                                    <p>2530 + </p> */}
+                                                </Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            ))}
+
+
+
+
+                            <div className='d-grid gap-2  d-sm-block'>                                           
+                                             <Button onClick={() => { handleShow(`${item.id}`) }} variant="" className=' btn-sm ' ><i class="fa-solid fa-pen-to-square fs-5 btnedit"></i></Button>
+                                                <Button onClick={() => { handleDelete(`${item.id}`) }} variant="" className='btn-sm ms-5' ><i class="fa-solid fa-trash-can fs-5 btndel "></i></Button>
+                                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                             <div style={{ marginLeft: '6%' }} className='movierow'>
+                    {order_data.order_data?.map(Array => {
+                        return (
+
+                            Array[0]?.map(Array[0].reverse().map(Obj => {
+                                return (
+                                    Obj?.map(item => {
+                                        <div className='each p-4 text-center'>
+                                            <div>
+                                                {/* <img src={item.image} style={{ width: '150px', height: '150px' }}></img> */}
+                                                <p className='fs-6 mb-0' style={{ color: '#562B08' }}>{item.name}</p>
+
+                                            </div>
+                                            <p style={{ color: '#562B08', fontSize: '12px' }}>Qty: {item.orderqty}</p>
+                                            <p className='text-start m-2' style={{ color: '#562B08', fontSize: '14px' }}>Price: {item.price}/-</p>
+
+
+                                        </div>
+
+                                    })
+                                )
+                            }))
+
+                        )
+                    })}
+                </div>
+
+
+
+
+                 {orderData !== {} ? Array(orderData).map(data => {
+                        return (
+                            data.orderData ?
+                                data.orderData.order_data.slice(0).reverse().map((item) => {
+                                    return (
+                                        item.map((arrayData) => {
+                                            return (
+                                                <div  >
+                                                    {arrayData.Order_date ? <div className='m-auto mt-5'>
+
+                                                        {data = arrayData.Order_date}
+                                                        <hr />
+                                                    </div> :
+
+                                                        <div className='col-12 col-md-6 col-lg-3' >
+                                                            <div className="card mt-3" style={{ width: "16rem", maxHeight: "360px" }}>
+                                                                {/* <img src={arrayData.img} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill" }} /> */}
+                                                                <div className="card-body">
+                                                                    <h5 className="card-title">{arrayData.name}</h5>
+                                                                    <div className='container w-100 p-0' style={{ height: "38px" }}>
+                                                                        <span className='m-1'>{arrayData.orderqty}</span>
+                                                                        {/* <span className='m-1'>{arrayData.size}</span> */}
+                                                                        <span className='m-1'>{data}</span>
+                                                                        <div className=' d-inline ms-2 h-100 w-20 fs-5' >
+                                                                            ₹{arrayData.price}/-
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+
+                                                    }
+
+                                                </div>
+                                            )
+                                        })
+
+                                    )
+                                }) : ""
+                        )
+                    }) : ""}
